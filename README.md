@@ -1,30 +1,31 @@
-# Carlos Fernando dos Santos - Portfólio
+Obrigado por visitar meu portfólio!
 
-Bem-vindo ao meu portfólio online! Este repositório contém o código-fonte do meu site pessoal, que apresenta minha experiência profissional, habilidades técnicas e informações de contato.
+# Olá, eu sou Fernando Cabo! 👋
 
-## Tecnologias Utilizadas
+## Desenvolvedor de Software
 
-- HTML5
-- CSS3
-- JavaScript
+Bem-vindo ao meu perfil GitHub! Sou um desenvolvedor de software apaixonado por criar soluções inovadoras e eficientes.
 
-## Estrutura do Projeto
+### 🌐 Meu Portfólio
 
-- `index.html`: Página principal do site
-- `style.css`: Estilos CSS para o layout e design
-- `scripts.js`: Funcionalidades JavaScript para interatividade
-- `README.md`: Este arquivo, contendo informações sobre o projeto
+Confira meu portfólio online para ver mais sobre meus projetos e experiências:
 
-## Como Visualizar
+[**https://cabofernando.github.io/**](https://cabofernando.github.io/)
 
-Você pode acessar meu portfólio online em [https://cabofernando.github.io](https://cabofernando.github.io) ou clonar este repositório e abrir o arquivo `index.html` em seu navegador local.
+### 💼 Habilidades
 
-## Contato
+- C#, Python, JavaScript
+- .NET, ASP.NET MVC, Entity Framework
+- Angular, AngularJS, Bootstrap, SAPUI5
+- SQL Server, ElasticSearch
+- Azure Service Bus, Azure DevOps
+- Git, DDD, API RESTful, Microserviços
 
-Sinta-se à vontade para entrar em contato comigo através dos seguintes meios:
+### 📫 Como me contatar
 
-- Email: fer.1972@hotmail.com
+- Email: [fer.1972@hotmail.com](mailto:fer.1972@hotmail.com)
+- WhatsApp: [+55 (18) 99779-8490](https://api.whatsapp.com/send?phone=5518997798490)
 - LinkedIn: [www.linkedin.com/in/carlos-fernando](https://www.linkedin.com/in/carlos-fernando)
 - GitHub: [github.com/CaboFernando](https://github.com/CaboFernando)
 
-Obrigado por visitar meu portfólio!
+Sinta-se à vontade para explorar meus repositórios e entrar em contato para colaborações ou oportunidades!
