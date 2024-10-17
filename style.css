@@ -5,6 +5,9 @@
   --background-color: #ecf0f1;
   --accent-color: #e74c3c;
   --card-bg: #fff;
+  --header-bg: #34495e;
+  --freelancer-color: #27ae60;
+  --fulltime-color: #f39c12;
 }
 
 * {
@@ -22,7 +25,7 @@ body {
 }
 
 header {
-  background-color: var(--primary-color);
+  background-color: var(--header-bg);
   color: #fff;
   padding: 1rem 0;
   position: fixed;
@@ -57,7 +60,7 @@ nav ul li a:hover {
 
 main {
   max-width: 1200px;
-  margin: 100px auto 0;
+  margin: 80px auto 0;
   padding: 20px;
 }
 
@@ -116,11 +119,18 @@ h2 {
 .job-type {
   display: inline-block;
   padding: 3px 8px;
-  background-color: var(--accent-color);
   color: #fff;
   border-radius: 4px;
   font-size: 0.8em;
   margin-bottom: 5px;
+}
+
+.job-type.freelancer {
+  background-color: var(--freelancer-color);
+}
+
+.job-type.fulltime {
+  background-color: var(--fulltime-color);
 }
 
 .job-period {
@@ -209,25 +219,42 @@ footer {
 }
 
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  nav ul li {
-    margin: 10px 0;
+  header {
+    position: relative;
   }
 
   main {
-    padding: 10px;
+    margin-top: 20px;
   }
 
-  .job {
+  nav ul {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  nav ul li {
+    margin: 5px 10px;
+  }
+
+  nav ul li a {
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .job, .education {
     padding: 15px;
   }
 
   #habilidades ul {
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   #contato {
@@ -235,7 +262,6 @@ footer {
   }
 }
 
-/* Animações */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -245,7 +271,6 @@ section {
   animation: fadeIn 1s ease-out;
 }
 
-/* Modo escuro */
 @media (prefers-color-scheme: dark) {
   :root {
     --primary-color: #34495e;
@@ -253,6 +278,7 @@ section {
     --text-color: #ecf0f1;
     --background-color: #2c3e50;
     --card-bg: #34495e;
+    --header-bg: #2c3e50;
   }
 
   body {
