@@ -308,12 +308,15 @@ section {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary-color: #34495e;
-    --secondary-color: #3498db;
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
     --text-color: #ecf0f1;
     --background-color: #2c3e50;
     --card-bg: #34495e;
     --header-bg: #2c3e50;
+    --job-bg: #2c3e50;
+    --education-bg: #2c3e50;
+    --contact-bg: #34495e;
   }
 
   body {
@@ -321,7 +324,56 @@ section {
     color: var(--text-color);
   }
 
-  .job, .education, #contato p {
+  .job, .education {
+    background-color: var(--job-bg);
+    border-left-color: var(--secondary-color);
+  }
+
+  #contato p {
+    background-color: var(--contact-bg);
+  }
+
+  h1, h2, h3 {
+    color: var(--primary-color);
+  }
+
+  .job h3 {
+    color: var(--secondary-color);
+  }
+
+  .skill-category {
     background-color: var(--card-bg);
+  }
+
+  .skill-category h3, .skill-category li {
+    color: var(--text-color);
+  }
+
+  #contato a {
+    color: var(--text-color);
+  }
+
+  #contato a:hover {
+    color: var(--secondary-color);
+  }
+
+  #contato i {
+    color: var(--secondary-color);
+  }
+
+  #contato p:hover {
+    background-color: var(--primary-color);
+  }
+
+  .job-period, p {
+    color: #bdc3c7;
+  }
+
+  nav ul li a {
+    color: #ecf0f1;
+  }
+
+  nav ul li a:hover {
+    color: var(--secondary-color);
   }
 }
