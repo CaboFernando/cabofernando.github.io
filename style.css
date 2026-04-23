@@ -649,7 +649,7 @@ h2 {
   font-size: 0.88rem;
   border: 1px solid var(--border-color);
   transition: all var(--transition);
-  word-break: break-all;
+  overflow-wrap: break-word;
 }
 
 .contact-card:hover {
