@@ -99,20 +99,23 @@ document.addEventListener('DOMContentLoaded', function () {
     // ─── GitHub Avatar ────────────────────────────────────────────────────────
     var avatarEl = document.querySelector('.hero-avatar');
 
-    fetch('https://api.github.com/users/CaboFernando')
-        .then(function (res) { return res.json(); })
-        .then(function (data) {
-            if (data && data.avatar_url) {
-                var img = document.createElement('img');
-                img.src = data.avatar_url;
-                img.alt = 'Carlos Fernando dos Santos';
-                img.addEventListener('load', function () {
-                    avatarEl.textContent = '';
-                    avatarEl.appendChild(img);
-                });
-            }
-        })
-        .catch(function () { /* keep initials on error */ });
+    if (avatarEl) {
+        fetch('https://api.github.com/users/CaboFernando')
+            .then(function (res) { return res.json(); })
+            .then(function (data) {
+                if (data && data.avatar_url) {
+                    var img = document.createElement('img');
+                    img.src = data.avatar_url;
+                    img.alt = 'Carlos Fernando dos Santos';
+                    img.addEventListener('load', function () {
+                        avatarEl.textContent = '';
+                        avatarEl.appendChild(img);
+                    });
+                    img.addEventListener('error', function () { /* keep initials on image load failure */ });
+                }
+            })
+            .catch(function () { /* keep initials on fetch error */ });
+    }
 
     // ─── Scroll Reveal (Intersection Observer) ────────────────────────────────
     var revealElements = document.querySelectorAll('.reveal');
