@@ -96,6 +96,24 @@ document.addEventListener('DOMContentLoaded', function () {
     updateActiveNav();
     updateBackToTop();
 
+    // ─── GitHub Avatar ────────────────────────────────────────────────────────
+    var avatarEl = document.querySelector('.hero-avatar');
+
+    fetch('https://api.github.com/users/CaboFernando')
+        .then(function (res) { return res.json(); })
+        .then(function (data) {
+            if (data && data.avatar_url) {
+                var img = document.createElement('img');
+                img.src = data.avatar_url;
+                img.alt = 'Carlos Fernando dos Santos';
+                img.addEventListener('load', function () {
+                    avatarEl.textContent = '';
+                    avatarEl.appendChild(img);
+                });
+            }
+        })
+        .catch(function () { /* keep initials on error */ });
+
     // ─── Scroll Reveal (Intersection Observer) ────────────────────────────────
     var revealElements = document.querySelectorAll('.reveal');
     var revealObserver = new IntersectionObserver(function (entries) {

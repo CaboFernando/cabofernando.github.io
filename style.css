@@ -310,7 +310,15 @@ h2 {
   z-index: 1;
 }
 
-.hero-role {
+.hero-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+
   font-size: 1.1rem;
   font-weight: 500;
   color: #94d2f7;
