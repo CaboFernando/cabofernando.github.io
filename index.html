@@ -1,199 +1,321 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Carlos Fernando dos Santos - Desenvolvedor .NET Sênior | Cloud | Microsserviços | APIs</title>
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    </head>
+<html lang="pt-br" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Carlos Fernando dos Santos — Desenvolvedor .NET Sênior com mais de 10 anos de experiência em back-end, microsserviços e cloud Azure/GCP.">
+    <meta property="og:title" content="Carlos Fernando dos Santos — Desenvolvedor .NET Sênior">
+    <meta property="og:description" content="Engenheiro de software sênior especializado em .NET (C#), microsserviços e arquitetura cloud.">
+    <meta property="og:type" content="website">
+    <title>Carlos Fernando dos Santos — Desenvolvedor .NET Sênior | Cloud | Microsserviços | APIs</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        (function () {
+            var saved = localStorage.getItem('theme');
+            var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            document.documentElement.setAttribute('data-theme', saved || (prefersDark ? 'dark' : 'light'));
+        })();
+    </script>
+</head>
 <body>
+    <div id="scroll-progress" role="progressbar" aria-hidden="true"></div>
+
     <header>
         <nav>
-            <ul>
+            <a class="nav-brand" href="#sobre" aria-label="Início">CF</a>
+            <ul class="nav-links" id="nav-links">
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#experiencia">Experiência</a></li>
                 <li><a href="#habilidades">Habilidades</a></li>
                 <li><a href="#formacao">Formação</a></li>
                 <li><a href="#contato">Contato</a></li>
             </ul>
+            <div class="nav-controls">
+                <button id="theme-toggle" aria-label="Alternar tema claro/escuro">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                </button>
+                <button id="hamburger" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav-links">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </nav>
     </header>
 
     <main>
-        <section id="sobre">
+        <section id="sobre" class="hero reveal">
+            <div class="hero-avatar" aria-hidden="true">CF</div>
             <h1>Carlos Fernando dos Santos</h1>
-          <h2>Desenvolvedor .NET Sênior | Cloud (Azure &amp; GCP) | Microsserviços | APIs</h2>
-          <p>Engenheiro de software sênior com mais de 10 anos de experiência em desenvolvimento back-end, especializado em .NET (C#), microsserviços e arquitetura cloud (Azure e GCP).</p>
-          <p>Atuo como líder técnico em projetos internacionais, com forte experiência em Domain-Driven Design (DDD), Clean Architecture e práticas de DevOps, entregando soluções escaláveis e de alto impacto para o negócio.</p>
-        </section>
-
-        <section id="experiencia">
-            <h2>Experiência Profissional</h2>
-          <div class="job">
-            <h3>Desenvolvedor Backend .NET Sênior - act digital</h3>
-            <p class="job-type fulltime">Full-time</p>
-            <p class="job-period">agosto de 2025 - Presente</p>
-            <p>Atuação no projeto Pix Crédito (Banco Carrefour), utilizando: C#, .NET 9/10, .NET Aspire, DDD, MySQL, MongoDB, Redis, Docker, GCP, Terraform e Pub/Sub.</p>
-          </div>
-            <div class="job">
-              <h3>Desenvolvedor .Net - Venice Technology</h3>
-              <p class="job-type fulltime">Full-time</p>
-            <p class="job-period">junho de 2023 - agosto de 2025 (2 anos e 3 meses)</p>
-            <p>Atuação no projeto Mobilize CO com foco em back-end utilizando C#, .NET, DDD, SQL Server, Cosmos DB e Azure Service Bus.</p>
-          </div>
-            <div class="job">
-                <h3>Desenvolvedor de back end - Butlertech Technologies</h3>
-                <p class="job-type freelancer">Freelancer</p>
-                <p class="job-period">julho de 2024 - janeiro de 2025 (7 meses)</p>
-                <p>Responsável por fazer porting de C# para Python no back end de aplicações diversas.</p>
-            </div>            
-            <div class="job">
-                <h3>Desenvolvedor .Net - Portal glemO</h3>
-                <p class="job-type freelancer">Freelancer</p>
-                <p class="job-period">julho de 2023 - novembro de 2023 (5 meses)</p>
-                <p>Atuando no projeto Portal glemO, junto do time de tecnologia.</p>
+            <p class="hero-role">Desenvolvedor .NET Sênior</p>
+            <div class="hero-tags" aria-label="Especialidades">
+                <span class="hero-tag"><i class="fas fa-cloud" aria-hidden="true"></i> Azure &amp; GCP</span>
+                <span class="hero-tag"><i class="fas fa-cubes" aria-hidden="true"></i> Microsserviços</span>
+                <span class="hero-tag"><i class="fas fa-plug" aria-hidden="true"></i> APIs RESTful</span>
+                <span class="hero-tag"><i class="fas fa-location-dot" aria-hidden="true"></i> Brasil</span>
             </div>
-            <div class="job">
-                <h3>Engenheiro de software - Companhia Excelsior de Seguros</h3>
-                <p class="job-type fulltime">Full-time</p>
-                <p class="job-period">dezembro de 2022 - junho de 2023 (7 meses)</p>
-                <p>Atuando no time de projetos, responsável por manutenção e criação de novas features nos serviços disponíveis aos colaboradores feitos utilizando C#, .Net Core, X-Unit, Azure Service Bus, Azure DevOps, Git, SQL Server e Views.</p>
-            </div>
-            <div class="job">
-                <h3>Desenvolvedor .Net - Blite Tecnologia</h3>
-                <p class="job-type fulltime">Full-time</p>
-                <p class="job-period">maio de 2022 - dezembro de 2022 (8 meses)</p>
-                <p>Alocado no cliente Localiza, desenvolvendo features em API's feitas em .Net Core 6, com estrutura em DDD com testes unitários, Jobs automatizados utilizando Quartz, EF Core 6, Azure DevOps e as ferramentas mais atuais para o desenvolvimento.</p>
-            </div>
-            <div class="job">
-                <h3>Desenvolvedor .Net - Agence Consultoria</h3>
-                <p class="job-type freelancer">Freelancer</p>
-                <p class="job-period">janeiro de 2022 - maio de 2022 (5 meses)</p>
-                <p>Responsável pela criação de novas funcionalidades, manutenção de funcionalidades já criadas, correção de erros de sistema e publicação de algumas aplicações legado, ambas utilizando ASP.Net MVC.</p>
-            </div>
-            <div class="job">
-                <h3>Desenvolvedor de .NET sênior - Meta</h3>
-                <p class="job-type fulltime">Full-time</p>
-                <p class="job-period">agosto de 2021 - março de 2022 (8 meses)</p>
-                <p>Responsável pela criação e manutenção de novas aplicações baseadas em .Net Core e Web API's RestFul do cliente terceirizado da empresa. Atuando diretamente com o time internacional da Dell Corp.</p>
-            </div>
-            <div class="job">
-                <h3>Desenvolvedor .Net - Best.Projects</h3>
-                <p class="job-type fulltime">Full-time</p>
-                <p class="job-period">novembro de 2020 - agosto de 2021 (10 meses)</p>
-                <p>Responsável pela manutenção no back-end de API's e micro serviços já criados, e criação de novas API's todas em RestFul .net core 3.1 e posteriormente evoluída para .net core 5.0. Para a conversação foi utilizado o serviço de mensageria RabbitMQ e busca na base de dados otimizada com ElasticSearch.</p>
-            </div>
-            <div class="job">
-                <h3>Desenvolvedor .Net - Retornar</h3>
-                <p class="job-type fulltime">Full-time</p>
-                <p class="job-period">março de 2020 - outubro de 2020 (8 meses)</p>
-                <p>Responsável por criação do novo projeto v2 100% Web API RestFul utilizando .net core 3.1, utilizado no modelo de negócios da empresa com foco primário em e-commerce no início apenas nos Estados Unidos, e expandido para o mundo todo.</p>
-            </div>
-            <div class="job">
-                <h3>Desenvolvedor Full Stack - Advise Brasil</h3>
-                <p class="job-type fulltime">Full-time</p>
-                <p class="job-period">junho de 2019 - março de 2020 (10 meses)</p>
-                <p>No back-end utilizo das tecnologias ASP.NET, C# e SQL Server para o desenvolvimento e manutenção de API's, que mais tarde são usadas pelas aplicações (web e mobile). No front-end, usa-se JavaScript e AngularJS.</p>
-            </div>
-            <div class="job">
-                <h3>Desenvolvedor Full Stack - ForLogic</h3>
-                <p class="job-type fulltime">Full-time</p>
-                <p class="job-period">janeiro de 2016 - março de 2019 (3 anos 3 meses)</p>
-                <p>Atuando em projetos de entrega por demanda utilizando tecnologias como Ext.js, JavaScript, Angular 7, Bootstrap, Material, Sapui5 no front end e ASP.net MVC, C#, DDD, ABAP no back end.</p>
+            <p class="hero-description">Engenheiro de software sênior com mais de 10 anos de experiência em desenvolvimento back-end, especializado em .NET (C#), microsserviços e arquitetura cloud (Azure e GCP).</p>
+            <p class="hero-description">Atuo como líder técnico em projetos internacionais, com forte experiência em Domain-Driven Design (DDD), Clean Architecture e práticas de DevOps, entregando soluções escaláveis e de alto impacto para o negócio.</p>
+            <div class="hero-actions">
+                <a href="#contato" class="btn btn-primary">Entrar em Contato</a>
+                <a href="#experiencia" class="btn btn-outline">Ver Experiência</a>
             </div>
         </section>
 
-        <section id="habilidades">
-            <h2>Habilidades Técnicas</h2>
+        <section id="experiencia" class="reveal">
+            <h2><i class="fas fa-briefcase section-icon" aria-hidden="true"></i> Experiência Profissional</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker" aria-hidden="true"></div>
+                    <div class="job">
+                        <h3>Desenvolvedor Backend .NET Sênior <span class="job-company">· act digital</span></h3>
+                        <div class="job-meta">
+                            <span class="job-type fulltime">Full-time</span>
+                            <span class="job-period"><i class="fas fa-calendar-alt" aria-hidden="true"></i> agosto de 2025 – Presente</span>
+                        </div>
+                        <p>Atuação no projeto Pix Crédito (Banco Carrefour), utilizando: C#, .NET 9/10, .NET Aspire, DDD, MySQL, MongoDB, Redis, Docker, GCP, Terraform e Pub/Sub.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker" aria-hidden="true"></div>
+                    <div class="job">
+                        <h3>Desenvolvedor .NET <span class="job-company">· Venice Technology</span></h3>
+                        <div class="job-meta">
+                            <span class="job-type fulltime">Full-time</span>
+                            <span class="job-period"><i class="fas fa-calendar-alt" aria-hidden="true"></i> junho de 2023 – agosto de 2025 (2 anos e 3 meses)</span>
+                        </div>
+                        <p>Atuação no projeto Mobilize CO com foco em back-end utilizando C#, .NET, DDD, SQL Server, Cosmos DB e Azure Service Bus.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker" aria-hidden="true"></div>
+                    <div class="job">
+                        <h3>Desenvolvedor de Back-end <span class="job-company">· Butlertech Technologies</span></h3>
+                        <div class="job-meta">
+                            <span class="job-type freelancer">Freelancer</span>
+                            <span class="job-period"><i class="fas fa-calendar-alt" aria-hidden="true"></i> julho de 2024 – janeiro de 2025 (7 meses)</span>
+                        </div>
+                        <p>Responsável por fazer porting de C# para Python no back-end de aplicações diversas.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker" aria-hidden="true"></div>
+                    <div class="job">
+                        <h3>Desenvolvedor .NET <span class="job-company">· Portal glemO</span></h3>
+                        <div class="job-meta">
+                            <span class="job-type freelancer">Freelancer</span>
+                            <span class="job-period"><i class="fas fa-calendar-alt" aria-hidden="true"></i> julho de 2023 – novembro de 2023 (5 meses)</span>
+                        </div>
+                        <p>Atuando no projeto Portal glemO, junto do time de tecnologia.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker" aria-hidden="true"></div>
+                    <div class="job">
+                        <h3>Engenheiro de Software <span class="job-company">· Companhia Excelsior de Seguros</span></h3>
+                        <div class="job-meta">
+                            <span class="job-type fulltime">Full-time</span>
+                            <span class="job-period"><i class="fas fa-calendar-alt" aria-hidden="true"></i> dezembro de 2022 – junho de 2023 (7 meses)</span>
+                        </div>
+                        <p>Atuando no time de projetos, responsável por manutenção e criação de novas features nos serviços disponíveis aos colaboradores feitos utilizando C#, .NET Core, X-Unit, Azure Service Bus, Azure DevOps, Git, SQL Server e Views.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker" aria-hidden="true"></div>
+                    <div class="job">
+                        <h3>Desenvolvedor .NET <span class="job-company">· Blite Tecnologia</span></h3>
+                        <div class="job-meta">
+                            <span class="job-type fulltime">Full-time</span>
+                            <span class="job-period"><i class="fas fa-calendar-alt" aria-hidden="true"></i> maio de 2022 – dezembro de 2022 (8 meses)</span>
+                        </div>
+                        <p>Alocado no cliente Localiza, desenvolvendo features em APIs feitas em .NET Core 6, com estrutura em DDD com testes unitários, Jobs automatizados utilizando Quartz, EF Core 6, Azure DevOps e as ferramentas mais atuais para o desenvolvimento.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker" aria-hidden="true"></div>
+                    <div class="job">
+                        <h3>Desenvolvedor .NET <span class="job-company">· Agence Consultoria</span></h3>
+                        <div class="job-meta">
+                            <span class="job-type freelancer">Freelancer</span>
+                            <span class="job-period"><i class="fas fa-calendar-alt" aria-hidden="true"></i> janeiro de 2022 – maio de 2022 (5 meses)</span>
+                        </div>
+                        <p>Responsável pela criação de novas funcionalidades, manutenção de funcionalidades já criadas, correção de erros de sistema e publicação de aplicações legado utilizando ASP.NET MVC.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker" aria-hidden="true"></div>
+                    <div class="job">
+                        <h3>Desenvolvedor .NET Sênior <span class="job-company">· Meta</span></h3>
+                        <div class="job-meta">
+                            <span class="job-type fulltime">Full-time</span>
+                            <span class="job-period"><i class="fas fa-calendar-alt" aria-hidden="true"></i> agosto de 2021 – março de 2022 (8 meses)</span>
+                        </div>
+                        <p>Responsável pela criação e manutenção de novas aplicações baseadas em .NET Core e Web APIs RESTful do cliente terceirizado da empresa. Atuando diretamente com o time internacional da Dell Corp.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker" aria-hidden="true"></div>
+                    <div class="job">
+                        <h3>Desenvolvedor .NET <span class="job-company">· Best.Projects</span></h3>
+                        <div class="job-meta">
+                            <span class="job-type fulltime">Full-time</span>
+                            <span class="job-period"><i class="fas fa-calendar-alt" aria-hidden="true"></i> novembro de 2020 – agosto de 2021 (10 meses)</span>
+                        </div>
+                        <p>Responsável pela manutenção no back-end de APIs e microsserviços já criados, e criação de novas APIs em .NET Core 3.1, evoluídas para .NET Core 5.0. Utilizado RabbitMQ para mensageria e ElasticSearch para busca otimizada.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker" aria-hidden="true"></div>
+                    <div class="job">
+                        <h3>Desenvolvedor .NET <span class="job-company">· Retornar</span></h3>
+                        <div class="job-meta">
+                            <span class="job-type fulltime">Full-time</span>
+                            <span class="job-period"><i class="fas fa-calendar-alt" aria-hidden="true"></i> março de 2020 – outubro de 2020 (8 meses)</span>
+                        </div>
+                        <p>Responsável pela criação do projeto v2 100% Web API RESTful em .NET Core 3.1, com foco no modelo de negócios de e-commerce inicialmente nos EUA e expandido para o mundo todo.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker" aria-hidden="true"></div>
+                    <div class="job">
+                        <h3>Desenvolvedor Full Stack <span class="job-company">· Advise Brasil</span></h3>
+                        <div class="job-meta">
+                            <span class="job-type fulltime">Full-time</span>
+                            <span class="job-period"><i class="fas fa-calendar-alt" aria-hidden="true"></i> junho de 2019 – março de 2020 (10 meses)</span>
+                        </div>
+                        <p>No back-end utilizando ASP.NET, C# e SQL Server para desenvolvimento e manutenção de APIs. No front-end, JavaScript e AngularJS.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker" aria-hidden="true"></div>
+                    <div class="job">
+                        <h3>Desenvolvedor Full Stack <span class="job-company">· ForLogic</span></h3>
+                        <div class="job-meta">
+                            <span class="job-type fulltime">Full-time</span>
+                            <span class="job-period"><i class="fas fa-calendar-alt" aria-hidden="true"></i> janeiro de 2016 – março de 2019 (3 anos e 3 meses)</span>
+                        </div>
+                        <p>Projetos de entrega por demanda com Ext.js, JavaScript, Angular 7, Bootstrap, Material e SAPUI5 no front-end; ASP.NET MVC, C#, DDD e ABAP no back-end.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="reveal">
+            <h2><i class="fas fa-laptop-code section-icon" aria-hidden="true"></i> Habilidades Técnicas</h2>
             <div class="skills-grid">
-              <div class="skill-category">
-                <h3>Linguagens</h3>
-                <ul>
-                  <li>C#</li>
-                  <li>Python</li>
-                  <li>JavaScript</li>
-                </ul>
-              </div>
-              <div class="skill-category">
-                <h3>Frameworks</h3>
-                <ul>
-                  <li>.NET</li>
-                  <li>.NET 9/10</li>
-                  <li>.NET Aspire</li>
-                  <li>ASP.NET MVC</li>
-                  <li>Entity Framework</li>
-                  <li>Angular</li>
-                  <li>AngularJS</li>
-                  <li>Bootstrap</li>
-                  <li>SAPUI5</li>
-                </ul>
-              </div>
-              <div class="skill-category">
-                <h3>Banco de Dados</h3>
-                <ul>
-                  <li>SQL Server</li>
-                  <li>MySQL</li>
-                  <li>ElasticSearch</li>
-                  <li>Cosmos DB</li>
-                  <li>PostgreSQL</li>
-                  <li>MongoDB</li>
-                </ul>
-              </div>
-              <div class="skill-category">
-                <h3>Cloud & DevOps</h3>
-                <ul>
-                  <li>Google Cloud Platform (GCP)</li>
-                  <li>Terraform</li>
-                  <li>Docker</li>
-                  <li>Azure Service Bus</li>
-                  <li>Azure DevOps</li>
-                  <li>Git</li>
-                </ul>
-              </div>
-              <div class="skill-category">
-                <h3>Arquitetura</h3>
-                <ul>
-                  <li>DDD</li>
-                  <li>Clean Architecture</li>
-                  <li>Liderança técnica</li>
-                  <li>API RESTful</li>
-                  <li>Microserviços</li>
-                </ul>
-              </div>
-              <div class="skill-category">
-                <h3>Mensageria</h3>
-                <ul>
-                  <li>RabbitMQ</li>
-                  <li>Pub/Sub</li>
-                </ul>
-              </div>
-            </div>
-          </section>
-
-        <section id="formacao">
-            <h2>Formação Acadêmica</h2>
-            <div class="education">
-                <h3>Universidade Tecnológica Federal do Paraná</h3>
-                <p>Graduação, Tecnologia em Análise e Desenvolvimento de Sistemas</p>
-                <p>janeiro de 2015 - julho de 2026</p>
+                <div class="skill-category">
+                    <h3><i class="fas fa-code" aria-hidden="true"></i> Linguagens</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-layer-group" aria-hidden="true"></i> Frameworks</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">.NET</span>
+                        <span class="skill-tag">.NET 9/10</span>
+                        <span class="skill-tag">.NET Aspire</span>
+                        <span class="skill-tag">ASP.NET MVC</span>
+                        <span class="skill-tag">Entity Framework</span>
+                        <span class="skill-tag">Angular</span>
+                        <span class="skill-tag">AngularJS</span>
+                        <span class="skill-tag">Bootstrap</span>
+                        <span class="skill-tag">SAPUI5</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-database" aria-hidden="true"></i> Banco de Dados</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">SQL Server</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Cosmos DB</span>
+                        <span class="skill-tag">ElasticSearch</span>
+                        <span class="skill-tag">Redis</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-cloud" aria-hidden="true"></i> Cloud &amp; DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Azure</span>
+                        <span class="skill-tag">GCP</span>
+                        <span class="skill-tag">Terraform</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Azure Service Bus</span>
+                        <span class="skill-tag">Azure DevOps</span>
+                        <span class="skill-tag">Git</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-sitemap" aria-hidden="true"></i> Arquitetura</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">DDD</span>
+                        <span class="skill-tag">Clean Architecture</span>
+                        <span class="skill-tag">Microsserviços</span>
+                        <span class="skill-tag">API RESTful</span>
+                        <span class="skill-tag">Liderança técnica</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-paper-plane" aria-hidden="true"></i> Mensageria</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">RabbitMQ</span>
+                        <span class="skill-tag">Pub/Sub</span>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="contato">
-            <h2>Contato</h2>
-            <p><i class="far fa-envelope"></i> <a href="mailto:fer.1972@hotmail.com">fer.1972@hotmail.com</a></p>
-            <p><i class="fab fa-whatsapp"></i> <a href="https://api.whatsapp.com/send?phone=5518997798490">+55 (18) 99779-8490</a></p>
-            <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/carlos-fernando" target="_blank">www.linkedin.com/in/carlos-fernando</a></p>
-            <p><i class="fab fa-github"></i> <a href="https://github.com/CaboFernando" target="_blank">github.com/CaboFernando</a></p>
+        <section id="formacao" class="reveal">
+            <h2><i class="fas fa-graduation-cap section-icon" aria-hidden="true"></i> Formação Acadêmica</h2>
+            <div class="education">
+                <div class="education-icon" aria-hidden="true"><i class="fas fa-university"></i></div>
+                <div class="education-info">
+                    <h3>Universidade Tecnológica Federal do Paraná</h3>
+                    <p class="education-degree">Graduação — Tecnologia em Análise e Desenvolvimento de Sistemas</p>
+                    <p class="education-period"><i class="fas fa-calendar-alt" aria-hidden="true"></i> janeiro de 2015 – julho de 2026</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="reveal">
+            <h2><i class="fas fa-address-card section-icon" aria-hidden="true"></i> Contato</h2>
+            <div class="contact-grid">
+                <a href="mailto:fer.1972@hotmail.com" class="contact-card">
+                    <i class="far fa-envelope" aria-hidden="true"></i>
+                    <span>fer.1972@hotmail.com</span>
+                </a>
+                <a href="https://api.whatsapp.com/send?phone=5518997798490" class="contact-card" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                    <span>+55 (18) 99779-8490</span>
+                </a>
+                <a href="https://www.linkedin.com/in/carlos-fernando" class="contact-card" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
+                    <span>linkedin.com/in/carlos-fernando</span>
+                </a>
+                <a href="https://github.com/CaboFernando" class="contact-card" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                    <span>github.com/CaboFernando</span>
+                </a>
+            </div>
         </section>
     </main>
 
     <footer>
-      <p>&copy; 2026 Carlos Fernando dos Santos. Todos os direitos reservados.</p>
+        <p>&copy; 2026 Carlos Fernando dos Santos. Todos os direitos reservados.</p>
     </footer>
+
+    <button id="back-to-top" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
 
     <script src="scripts.js"></script>
 </body>
